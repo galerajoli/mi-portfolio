@@ -1,0 +1,1310 @@
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('../fonts/Satoshi-Bold.woff') format('woff'),
+        url('fonts/Satoshi_Complete/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Italic';
+    src: url('../fonts/Satoshi-Italic.woff2') format('woff2'),
+        url('../fonts/Satoshi-Italic.woff') format('woff'),
+        url('fonts/Satoshi_Complete/Satoshi_Complete/Fonts/TTF/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('../fonts/Satoshi-Black.woff2') format('woff2'),
+        url('../fonts/Satoshi-Black.woff') format('woff'),
+        url('fonts/Satoshi_Complete/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('../fonts/Satoshi-Regular.woff') format('woff'),
+         url('fonts/Satoshi_Complete/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+
+
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color:#ECC4D6;
+    
+}
+
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 50%; /* Centra el header en relación al borde izquierdo */
+    transform: translateX(-50%); /* Centra el header completamente */
+    width: 50%; /* Ancho del header */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(250, 250, 250, .5);
+    border-radius: 50px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, .05);
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px;
+}
+
+.ancho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Máximo ancho para el contenido */
+    padding: 0 20px;
+    height: auto;
+}
+.logo img {
+    width: 90px;
+ 
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    cursor: pointer;
+    padding: .75rem 1.875rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    margin: 0 15px;
+}
+
+ul li a {
+    font-family: 'Satoshi-Black';
+    color: var(--dark-brown);
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: pink;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .ancho {
+        flex-direction: column;
+    }
+
+    .navBar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1366px) {
+    .ancho {
+        justify-content: space-between; /* Espacia los elementos */
+    }
+}
+
+
+
+
+
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; /* Mantiene el ancho del header */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(250, 250, 250, .5);
+    border-radius: 50px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, .05);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espacio superior */
+    height: 80px; /* Define una altura clara para el header */
+}
+
+.ancho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+    height: auto;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    cursor: pointer;
+    padding: .75rem 1.875rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    margin: 0 15px;
+}
+
+ul li a {
+    font-family: 'Satoshi-Black';
+    color: var(--dark-brown);
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: pink;
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Puedes ajustar el ancho máximo del carrusel */
+    margin: 160px auto 0; /* Espacio debajo del header */
+    overflow: hidden;
+    background-color: #f0eae1;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 5s ease;
+    scroll-snap-type: x mandatory;
+    width: 100%; /* Ajustar el ancho al contenedor visible */
+}
+
+.carousel-item {
+    flex: 0 0 33.33%; /* Cada imagen ocupará un tercio del contenedor visible (ajusta según sea necesario) */
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center; /* Centra las imágenes dentro del contenedor */
+    padding: 5px;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.carousel-item img {
+    width: 100%; /* La imagen ocupa el 100% del tamaño del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 400px; /* Ajusta la altura máxima para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    border-radius: 8px;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Ocultar scrollbar */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.about-container {
+    position: relative;
+    background-image: url('gifs/aboutt.gif'); /* Fondo animado */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto; /* Ajusta automáticamente según el contenido */
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.imgAbout-container, .textAbout-container {
+
+    z-index: 2;
+    flex: 1;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 500px; /* Ajusta el ancho máximo del contenido */
+    position: relative; /* Si tiene un z-index, asegúrate de que sea menor que el del modal */
+    z-index: 10; /* Un valor menor que el modal */
+}
+
+.imgAbout-container {
+    margin-right: 20px; /* Espacio entre imagen y texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para la imagen */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Ajusta el contenedor de la imagen al ancho disponible */
+    max-width: 500px; /* Ajusta el ancho máximo del contenedor */
+    margin-left: 10%; /* Ajusta el margen izquierdo para centrar la imagen */
+}
+
+.imgAbout-container img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.textAbout-container {
+    max-width: 500px; /* Ajusta el ancho máximo del contenedor de texto */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    color: #f0eae1;
+}
+
+.textAbout-container h2 {
+    font-size: 36px; /* Tamaño del título */
+    margin-bottom: 10px;
+    font-family: 'Satoshi-Bold';
+    color: #f0eae1;
+}
+
+.textAbout-container p {
+    font-size: 22px; /* Aumenta el tamaño del texto */
+    line-height: 1.6; /* Ajusta el interlineado */
+    margin-bottom: 20px;
+    font-family: 'Satoshi-Regular';
+    color: #f0eae1;
+    text-align: center;
+}
+/* Boton a Linkedin*/
+
+.clickMebtn {
+    margin-top: 20px; /* Espacio entre el párrafo y el botón */
+}
+
+.cta {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Satoshi-Bold";
+    color: inherit;
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+    color: white;
+
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgb(238, 216, 220);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+    
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #f78da7;
+
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.96);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.flex-item p {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.flex-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('gifs/stars.gif');
+    background-size: cover;
+    opacity: 0.2; /* Reduce la opacidad del GIF */
+    z-index: 1;
+    pointer-events: none; /* Asegura que el overlay no interfiera con el contenido */
+}
+
+.flex-item .content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente detrás del texto */
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.heading text-m {
+    font-size: 22px;
+}
+
+.cajaUp {
+    display: grid;
+    place-items: end;
+    margin: auto;
+    padding: 15px;
+}
+
+.up {
+
+    font-family: "Pragati Narrow", sans-serif;
+    display: block;
+    cursor: pointer;
+    color: white;
+    background-color: #f78da7;
+    height: 3.6363636364rem;
+    width: 3.6363636364rem;
+    text-align: center;
+    line-height: 3.6363636364rem;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: auto;
+    -webkit-transition: -webkit-transform 0;
+    -moz-transition: -moz-transform 0;
+    -o-transition: -o-transform 0;
+    transition: transform 0;
+    text-decoration: none;
+
+}
+
+.up span {
+
+    display: block;
+    -webkit-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused
+}
+
+.up:hover span {
+    -webkit-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg)
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg)
+    }
+}
+
+@-ms-keyframes spin {
+    from {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg)
+    }
+}
+
+@-o-keyframes spin {
+    from {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes beat {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    30%,
+    80% {
+        transform: scale(0.92, 0.95);
+    }
+}
+
+
+/* Corazón */
+.cajacora {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    animation: 1.5s ease 0s infinite beat;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #f0eae1;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.influencias {
+    margin: 0px;
+}
+
+@keyframes shadowPulse {
+    0% {
+        text-shadow: 0 0 5px rgba(186, 85, 96, 0.5); /* Color rosa claro */
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(186, 85, 96, 0.8); /* Color rosa más intenso */
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(186, 85, 96, 0.5); /* Color rosa claro */
+    }
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: "Satoshi-Bold";
+    text-align: center;
+    color: #f0eae1; /* Color de texto */
+    animation: shadowPulse 1.5s infinite; /* Aplica la animación de sombra */
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    background-image: url('gifs/foam.gif');
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Añade sombra al hacer hover */
+}
+
+/* Imagen de fondo específica para cada tarjeta */
+.card-1 {
+    background-image: url('img/freakbanda.jpg');
+}
+
+.card-2 {
+    background-image: url('img/miumiu.jpg');
+}
+
+.card-3 {
+    background-image: url('img/schm.jpg');
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+}
+
+.card-content h2 {
+    font-family: 'Satoshi-Bold';
+    margin: 0 0 10px;
+    font-size: 80px;
+    color: pink;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.card-content p {
+    margin: 0 0 20px;
+    font-family: 'Satoshi-Bold';
+}
+
+.card-content button {
+    font-family: 'Satoshi-Bold';
+    background-color: #DDC3FF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+    background-color: #f78da7;
+}
+
+.juntos {
+    background-image: url('gifs/flow.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.juntos h2 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    font-family: "Satoshi-Bold";
+    text-align: center;
+    color: #f0eae1;
+}
+
+.juntos p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Satoshi-Italic';
+    color: #f0eae1;
+    text-align: center;
+}
+
+.juntos button {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Satoshi-Bold';
+    font-size:19px;
+    border-radius: 20px;
+    
+    background-color: #DDC3FF;
+    border: none;
+    color: white;
+ 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+   
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 115px; 
+    height: 45px; 
+    min-height: 45px; 
+    box-sizing: border-box; 
+}
+
+.juntos button:hover {
+    background-color: #f78da7;
+}
+
+.moving-text {
+    margin: 10px;
+    padding: 0 10px; /* Añade padding horizontal para separar el texto de los bordes */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    width: 100%; 
+    height: 50%; 
+    white-space: nowrap;
+    box-sizing: border-box; /* Asegura que el padding no altere el tamaño del botón */
+}
+.juntos button:hover .moving-text {
+    animation: moveText 2s linear infinite; /* La animación se activa en el hover */
+}
+
+.moving-text span {
+    flex-shrink: 0;
+    padding-right: 20px; /* Espacio entre las palabras para mejorar la legibilidad */
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-66.66%); /* Se ajusta para cubrir el texto repetido */
+    }
+}
+.certificados{
+    text-align: center;
+}
+.certificados a {
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: "Satoshi-Bold";
+    text-decoration: none;
+    text-align: center;
+    color: #f0eae1;
+    transition: transform 0.3s ease-in-out; /* Suaviza el efecto de zoom */
+}
+
+.certificados a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del texto */
+}
+
+
+.certifModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Habilita el desplazamiento interno si el contenido es más alto que la ventana */
+}
+
+.certifModal-contenido {
+    background-color: #f0eae1;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-height: 90vh; /* Limita la altura del modal al 90% de la altura de la ventana */
+    overflow-y: auto; /* Habilita el desplazamiento en el contenido del modal */
+    animation: fadeIn 0.5s;
+}
+
+.cerrarCertifModal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.certifModal-contenido h2{
+    color:#f78da7 ;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.cerrarCertifModal:hover,
+.cerrarCertifModal:focus {
+    color: black;
+}
+
+.imagenes-certificaciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.imagenes-certificaciones img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.imagenes-certificaciones img:hover {
+    transform: scale(1.05);
+}
+
+.certificados a i {
+    margin-left: 10px; /* Espacio entre el texto y el ícono */
+    font-size: 20px; /* Tamaño del ícono */
+    color: #f0eae1; /* Color del ícono para que coincida con el texto */
+    transition: transform 0.2s ease-in-out; /* Animación al pasar el cursor */
+}
+
+.certificados a:hover i {
+    transform: translateX(5px); /* Mueve la flecha hacia la derecha al pasar el cursor */
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 1; /* Mostrar delante de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    overflow: auto; /* Añadir scroll si el contenido es largo */
+}
+.modal h2{
+    color: #f36bbc;
+   font-size: 45px;
+    font-family: 'Satoshi-Bold';
+    padding: 10px;
+}
+
+.modal-content {
+    font-family: 'Satoshi-Bold';
+    background-color: #efd2e6; /* Ruta a tu imagen */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    margin: 10% auto; /* Centrar el modal verticalmente */
+    padding: 20px;
+    
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative; /* Para posicionar el botón de cierre */
+    color: #fff; /* Color de texto blanco para mayor contraste */
+}
+
+/* Estilos adicionales para el botón de cierre y otros elementos */
+.close {
+    color: #DDC3FF; /* Color rosa pastel para el botón de cierre */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f36bbc; /* Rosa más oscuro al pasar el ratón */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: #2ecc71; /* Verde pastel para los encabezados */
+    margin-top: 0;
+}
+
+label {
+    color: #fff; /* Color de texto blanco para las etiquetas */
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Borde sutil */
+    box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
+}
+
+textarea {
+    resize: vertical; /* Permitir el cambio de tamaño verticalmente */
+    min-height: 100px; /* Altura mínima para el textarea */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Borde sutil */
+    box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
+    resize: vertical; /* Permitir el cambio de tamaño verticalmente */
+    min-height: 100px; /* Altura mínima para el textarea */
+    font-family: 'Satoshi', sans-serif; /* Tipografía del texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+/* Personalizar el placeholder */
+textarea::placeholder {
+    color: #888; /* Color del placeholder */
+    font-family: 'Satoshi', sans-serif; /* Tipografía del placeholder */
+    
+}
+
+
+
+button {
+    font-family: 'Satoshi-Bold';
+    background-color: #DDC3FF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:#f78da7; 
+}
+
+
+
+footer {
+    margin-top: 10px;
+}
+
+.footer {
+    padding-top: 2.4545454545rem;
+    margin-bottom: 1.8409090909rem;
+    border-top: 1px solid white;
+    display: block;
+    
+   
+
+
+}
+
+.footer__text {
+    color: white;
+    text-decoration: none;
+    font-family: "Pragati Narrow", sans-serif;
+    float: left;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.footer__links {
+    font-family: "Pragati Narrow", sans-serif;
+    float: right;
+    text-align: right;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer__links a:hover {
+    cursor: pointer;
+    color: pink;
+}
+
+
+
+
+/*SECCION MUSICA*/
+
+.tituloGral h2{
+    color: wheat;
+    font-size: 45px;
+    font-family: 'Satoshi-Bold';
+    padding: 10px;
+    
+    
+}
+.tituloMusica{
+    background-color: transparent;
+    display: flex;
+    width: auto;
+    height: 90px;
+    margin-top: 100px;
+    padding-top: 150px;
+    margin: 20px;
+   
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+.container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0; /* Elimina el margen inferior entre contenedores */
+    
+  
+}
+.tituloCardMusica{
+    color: black;
+    font-size: 45px;
+    font-family: 'Satoshi-Bold';
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.text-card, .carousel-card {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.left-card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.right-card {
+    width: 50%;
+}
+.text-card {
+    width: 50%;
+}
+
+.carousel-card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Número de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+.text {
+    font-family: 'Satoshi-Regular';
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Número de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    
+    background-color: #DDC3FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #f78da7;
+}
